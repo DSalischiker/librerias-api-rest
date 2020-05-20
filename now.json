@@ -5,10 +5,31 @@
         "use": "@now/node-server"
     }],
     "routes": [{
+            "src": "/librerias_caba/(?<id>[^/]+)",
+            "dest": "/app.js/?id=$id",
+            "methods": [
+                "DELETE"
+            ]
+        },
+        {
+            "src": "/librerias_caba/(?<id>[^/]+)",
+            "dest": "/app.js/?id=$id",
+            "methods": [
+                "PUT"
+            ]
+        },
+        {
             "src": "/librerias_caba",
             "dest": "/app.js",
             "methods": [
                 "GET"
+            ]
+        },
+        {
+            "src": "/librerias_caba",
+            "dest": "/app.js",
+            "methods": [
+                "POST"
             ]
         },
         {
