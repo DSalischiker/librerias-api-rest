@@ -80,8 +80,8 @@ const crudLibrerias = (app) => {
     //URLS
     app.get('/librerias_caba', findAllLibrerias);
     app.post('/librerias_caba', addLibreria);
-    app.put('/librerias_caba/:id', modifyLibreria);
-    app.delete('/librerias_caba/:id', deleteLibreria);
+    app.put('/libreria/:id', modifyLibreria);
+    app.delete('/libreria/:id', deleteLibreria);
 }
 
 module.exports = crudLibrerias;
