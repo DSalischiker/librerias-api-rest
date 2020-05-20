@@ -41,7 +41,7 @@ const crudLibrerias = (app) => {
     };
 
     //PUT - Update a register that already exists in the DB
-    modifyLibrerias = function (req, res) {
+    modifyLibreria = function (req, res) {
         Libreria.findById(req.params.id, function (err, libreria) {
             libreria.id = req.body.id;
             libreria.lat = req.body.lat;
@@ -80,7 +80,7 @@ const crudLibrerias = (app) => {
     //URLS
     app.get('/librerias_caba', findAllLibrerias);
     app.post('/librerias_caba', addLibreria);
-    app.put('/librerias_caba/:id', modifyLibrerias);
+    app.put('/librerias_caba/:id', modifyLibreria);
     app.delete('/librerias_caba/:id', deleteLibreria);
 }
 
