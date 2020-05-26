@@ -18,7 +18,7 @@ const crudLibrerias = (app) => {
         console.log('POST');
         console.log(req.body);
         var libreria = new Libreria({
-            id: req.body.id,
+            /* id: req.body.id, */
             lat: req.body.lat,
             lng: req.body.lng,
             name: req.body.name,
@@ -43,7 +43,7 @@ const crudLibrerias = (app) => {
     //PUT - Update a register that already exists in the DB
     modifyLibreria = function (req, res) {
         Libreria.findById(req.params.id, function (err, libreria) {
-            libreria.id = req.body.id;
+            /* libreria.id = req.body.id; */
             libreria.lat = req.body.lat;
             libreria.lng = req.body.lng;
             libreria.name = req.body.name;
@@ -69,7 +69,7 @@ const crudLibrerias = (app) => {
         Libreria.findById(req.params.id, function (err, libreria) {
             libreria.remove(function (err) {
                 if (!err) {
-                    console.log('Removed');
+                    console.log('Removed', req.body);
                 } else {
                     console.log('Error:' + err);
                 }
